@@ -1,0 +1,32 @@
+<div class="container">
+  <img class="imagen_logo" src="./assets/login-logo.png" alt="Logo" class="responsive-img">
+  <p class="parrafo_titulo">Atención {{alerta.nombre_contacto}}, se ha producido una alerta de <b>{{alerta.tipo_alerta}}</b></p>
+
+
+  <div class="map-container">
+    <div class="loading-overlay" *ngIf="isLoading">
+        <div class="spinner"></div>
+    </div>
+    <iframe
+        class="responsive-map"
+        [src]="mapUrl"
+        (load)="onMapLoad()"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+  <div class="alert">
+    <p><span class="label">Alerta:</span><b>{{alerta.detalle_alerta}}</b></p>
+    <p><span class="label">Fecha:</span><b>{{alerta.fecha}}</b></p>
+    <p><span class="label">Patente:</span><b>{{alerta.patente}}</b></p>
+    <p><span class="label">Estado:</span><b>{{alerta.estado}}</b></p>
+    <p><span class="label">Responsable:</span><b>{{alerta.nombre_responsable}}</b></p>
+  </div>
+
+  <button class="btn btn-secondary" id="boton_gestion">Iniciar Gestión</button>
+</div>
+
+
+

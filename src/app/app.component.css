@@ -1,0 +1,122 @@
+/* General container styling */
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Logo image */
+.imagen_logo {
+  width: 110px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+/* Title paragraph styling */
+.parrafo_titulo {
+  font-size: 20px;
+  padding: 5px;
+}
+
+/* Alert box styling */
+.alert p {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.alert span {
+  text-align: left;
+}
+
+.alert b {
+  text-align: right;
+}
+
+/* Button styling */
+#boton_gestion {
+  margin-top: 10px;
+}
+
+button {
+  width: 135px;
+  max-width: 300px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .parrafo_titulo {
+      font-size: 18px;
+  }
+
+  .alert p {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}
+
+/* Map container styling */
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  padding-bottom: 42.25%; /* Aspect ratio 16:9 */
+}
+
+/* Loading overlay styling */
+.loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.loading-overlay p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1); /* Light grey background */
+  border-left: 8px solid #333; /* Dark grey spinning part */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite; /* Continuous spinning animation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive map iframe */
+.responsive-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
